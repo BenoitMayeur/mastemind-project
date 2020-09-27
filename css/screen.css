@@ -97,14 +97,6 @@ footer{
 
 }
 
-@keyframes f_main_div {
-    0% {opacity: 0;
-        margin-bottom: 200px;    
-    }
-    100% {opacity: 1;
-        margin-bottom: 0px;    
-    }
-}
 .f_list_icon{
     display: flex;
     justify-content: space-around;
@@ -157,6 +149,10 @@ footer{
 
 .buttonValidation:hover{
     color: white;
+}
+
+.imgExplanation{
+    width: 100%;
 }
 
 @-webkit-keyframes text-glowing{
@@ -479,6 +475,10 @@ main{
     .whiteDot{
         width: 0.5rem;
         height: 0.5rem;
+    }
+
+    .imgExplanation{
+        width: 50%;
     }
 } 
 
