@@ -136,6 +136,8 @@ function restartEverything(level){
     colorsToFind = [];
     numberLineBeingChanged=0;
 
+    buttonValidation.style.display = "inline";
+
     divShowingResultsMoving();
 
     document.querySelector(".titleSolution").classList.add("notVisible");
@@ -173,6 +175,8 @@ function restartEverything(level){
         
         }
     }
+
+    console.log(colorsToFind);
 
     blackDot = document.querySelectorAll(".blackDot");
     whiteDot = document.querySelectorAll(".whiteDot");
@@ -221,9 +225,6 @@ movingToTheNextLine();
 document.addEventListener('click', function (event) {
 
     if(event.target.classList.contains("difficultyLevel")){
-
-        //restartEverything(1);
-
 
         divsDifficulty = document.querySelectorAll(".difficultyLevel");
         for(div of divsDifficulty){
@@ -332,6 +333,7 @@ buttonValidation.addEventListener('click', (event) =>{
 
         if(results[0] === 4){
             alert("C'est gagné!");
+            buttonValidation.style.display = "none";
 
         }
         else if(results[0] !== 4 && numberLineBeingChanged>=10){
