@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    <link rel="icon" href="./images/favicon.ico?v=2" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <title>Mastermind</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="mainTitle text-shadow-pop-tr">MasterMind</h1>
+        <h2 class="mainSubTitle">Découvrirez-vous la combinaison de 4 couleurs <span class="specialText">?</span> </h2>
+    </header>
+    <main>
+        <section class="sectionDescriptionLevel">
+
+            <p>
+                <span class="importantInDescription">Facile</span>: la séquence à découvrir ne contient pas deux fois la même couleur.
+            </p>
+            <p>
+                <span class="importantInDescription">Moyen</span>: la séquence à découvrir peut avoir un ou des trous.
+            </p>
+            <p>
+                <span class="importantInDescription">Difficile</span>: la séquence à découvrir peut avoir un ou des trous et peut avoir plusieurs fois la même couleur.
+            </p>
+            <hr>
+            <div class="divImage">
+                <img src="images/explanations.png" alt="Exemples couleurs boules">
+            </div>
+
+            <p>
+                <span class="importantInDescription">Une boule noire</span> indique une couleur au bon endroit.<br>
+                <span class="importantInDescription">Une boule blanche</span> que la couleur appartient à la séquence, mais n'est pas au bon endroit.<br>
+                Vous avez droit à 10 essais. Cliquez sur l'une des couleurs du bandeau puis sur l'un des carrés vides pour lui donner la couleur.
+            </p>
+        </section>
+        <section class="sectionDifficultyLevels">
+            <div class="difficultyLevel activeLevel" data-name="difficultyLevel1">
+                Facile
+            </div>
+            <div class="difficultyLevel" data-name="difficultyLevel2">
+                Moyen
+            </div>
+            <div class="difficultyLevel" data-name="difficultyLevel3">
+                Difficile
+            </div>
+        </section>
+        <section class="listColors">
+            <div class="divOneColor">
+                <div class="displayColor blue" data-color="blue">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor green" data-color="green">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor red" data-color="red">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor yellow" data-color="yellow">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor purple" data-color="purple">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor white" data-color="white">
+
+                </div>
+            </div>
+            <div class="divOneColor">
+                <div class="displayColor orange" data-color="orange">
+
+                </div>
+            </div>
+            <div class="divOneColor empty easyLevel">
+                <div class="displayColor emptyColor" data-color="emptyColor">
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="lineAnswers">
+                <div class="results currentResults">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="answerColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="answerColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="answerColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="answerColor noColor">
+
+                    </div>
+                </div>
+                <div class="buttonValidation">
+                    Vérifier
+                </div>
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="lineAnswers">
+                <div class="results ">
+
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="lineSolutions">
+                <h2 class="titleSolution notVisible">
+                    Solution
+                </h2>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+                <div class="divOneColor">
+                    <div class="displayColor noColor">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="f_main_div">
+            <div class="f_list_icon">
+                <div class="f_div_one_icon">
+                    <a class="a_icon" href="https://github.com/BenoitMayeur?tab=repositories" target="_blank">
+                        <i class="fab fa-github icon_footer_g"></i>
+                    </a>
+                </div>
+                <div class="f_div_one_icon">
+                    <a class="a_icon" href="https://www.linkedin.com/in/benoît-mayeur-61699446/" target="_blank">
+                        <i class="fab fa-linkedin-in icon_footer_l"></i>
+                    </a>
+                </div>
+            </div>
+            <p>
+                Handcrafted by Me <br> &copy; Benoît Mayeur
+            </p>
+        </div>
+
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
