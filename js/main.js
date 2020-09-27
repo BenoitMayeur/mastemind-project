@@ -62,8 +62,6 @@ function takeColorsAndCompare(){
 
     listColorsToFind = [...colorsToFind];
 
-    console.log("Couleurs utilisateur", answersColors);
-
     color = "";
     blackDots = 0;
     whiteDots = 0;
@@ -96,8 +94,6 @@ function takeColorsAndCompare(){
     }
 
     results.push(whiteDots);
-
-    console.log("Noirs", results[0], "Blancs", results[1]);
 
     return results
 }
@@ -178,7 +174,6 @@ function restartEverything(level){
         }
     }
 
-    console.log(colorsToFind);
 
     blackDot = document.querySelectorAll(".blackDot");
     whiteDot = document.querySelectorAll(".whiteDot");
