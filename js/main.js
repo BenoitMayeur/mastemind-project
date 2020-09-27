@@ -1,3 +1,15 @@
+/*
+    Project made by Benoit Mayeur - August/September 2020
+    Based on an exercice given during the Agile developer fullstack JS training
+    In the "Proforma" center (Liège)
+    --------------
+    Comments are easier to understand after adding the extension "Better Comments" in VSC
+*/
+
+/***********************************************************************
+******************** Variables
+********************/
+
 const originalListColors = ["blue", "green", "red", "yellow", "purple", "white", "orange", "emptyColor", "emptyColor", "emptyColor", "emptyColor"];
 let colorsToFind = [];
 let randomNumber;
@@ -14,6 +26,10 @@ buttonValidation = document.querySelector(".buttonValidation");
 /***********************************************************************
 ******************** Functions
 ********************/
+
+/*
+    * Function under: used to move from one line to the next one
+*/
 
 function movingToTheNextLine(){
 
@@ -33,6 +49,9 @@ function movingToTheNextLine(){
     numberLineBeingChanged++;
 }
 
+/*
+    * Function under: the validation button moves to the next line
+*/
 
 function validationButtonMoving(){
 
@@ -41,6 +60,11 @@ function validationButtonMoving(){
     listLinesAnswers = document.querySelectorAll(".lineAnswers");
     listLinesAnswers[numberLineBeingChanged].appendChild(buttonValidation)
 }
+
+/*
+    * Function under: the validation button moves to the next line
+    * @param: numberLine = show to which line the button will move
+*/
 
 function colorButtonsMoving(numberLine){
     
@@ -57,6 +81,14 @@ function colorButtonsMoving(numberLine){
         newColorButton.classList.add("answerColor");
     }
 }
+
+/*
+    * Function under: comparizon of the colors given by the user with the colors to find
+    * ! return an array results with two numbers: 
+    *   [0] => amount of black dots 
+    *   [1] => amount of white dots 
+*/
+
 
 function takeColorsAndCompare(){
 
@@ -98,6 +130,11 @@ function takeColorsAndCompare(){
     return results
 }
 
+/*
+    * Function under: the div that displays the white and black dots "moves" to the next line
+*/
+
+
 function divShowingResultsMoving(){
     listDivResults = [];
 
@@ -107,6 +144,14 @@ function divShowingResultsMoving(){
     }
     listDivResults[numberLineBeingChanged].classList.add("currentResults");
 }
+
+/*
+    * Function under: display the black and white dots
+    * @param: results = array results with two numbers: 
+    *   [0] => amount of black dots 
+    *   [1] => amount of white dots 
+*/
+
 
 function showWhiteAndBlackDots(results){
 
@@ -127,6 +172,11 @@ function showWhiteAndBlackDots(results){
     }
 
 }
+
+/*
+    * Function under: restart the game according to the level of difficulty
+    * @param: level => when the game starts, it is at "1": easy
+*/
 
 function restartEverything(level){
     difficultyLevel = level;
@@ -199,6 +249,10 @@ function restartEverything(level){
     }
 
 }
+
+/*
+    * Function under: display the solution in the div at the bottom
+*/
 
 function showSolution(){
 
