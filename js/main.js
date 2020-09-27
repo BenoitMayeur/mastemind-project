@@ -62,6 +62,8 @@ function takeColorsAndCompare(){
 
     listColorsToFind = [...colorsToFind];
 
+    console.log("Couleurs utilisateur", answersColors);
+
     color = "";
     blackDots = 0;
     whiteDots = 0;
@@ -85,10 +87,8 @@ function takeColorsAndCompare(){
     for(let i=0; i<answersColors.length; i++){
         answerTocheck = answersColors[i];
 
-        if(listColorsToFind.includes(answersColors[i])){
+        if(listColorsToFind.includes(answerTocheck)){
 
-            indexToSlide = listColorsToFind.includes(answersColors[i]);
-            listColorsToFind.splice(indexToSlide, 1);
             whiteDots++;
 
         }
@@ -96,6 +96,8 @@ function takeColorsAndCompare(){
     }
 
     results.push(whiteDots);
+
+    console.log("Noirs", results[0], "Blancs", results[1]);
 
     return results
 }
